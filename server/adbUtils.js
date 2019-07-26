@@ -29,6 +29,16 @@ module.exports = {
 
     }
   },
+  showProxy: function() {
+    try {
+      const proxy = execSync('adb shell settings get global global_http_proxy').toString()
+      const host = execSync('adb shell settings get global global_http_proxy_host').toString()
+      const port = execSync('adb shell settings get global global_http_proxy_port').toString()
+      return { proxy, host, port }
+    } catch (ex) {
+
+    }
+  },
   openBrowser: function(url) {
     try {
       execSync(`adb shell am start -a android.intent.action.VIEW -d ${url}`)
