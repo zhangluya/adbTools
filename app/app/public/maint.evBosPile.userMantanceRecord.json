@@ -1,0 +1,58 @@
+{
+  "list": [
+    {
+      "pileNo": "1042955689594",
+      "maintType": 1,
+      "createDate": 11112121212,
+      "repairFault": {
+        "faultCode": "4353453453453",
+        "faultName": "主板损坏；主板其他问题损坏"
+      },
+      "partsInfo": {
+        "partsGuid": 12,
+        "partsName": "更换主板",
+        "partsNum": 3
+      }
+    },
+    {
+      "pileNo": "1042955689585",
+      "maintType": 2,
+      "createDate": 11112121212,
+      "repairFault": {
+        "faultCode": "4353453453453",
+        "faultName": "主板损坏；主板其他问题损坏"
+      },
+      "customizeRepair": "这里是自定义维修的详情，内容超出回行展示",
+      "partsInfo": {
+        "partsGuid": 12,
+        "partsName": "主板",
+        "partsNum": 1
+      },
+      "maintNumInfo": {
+        "freshCode": 34234234234,
+        "oldCode": 34234234234
+      }
+
+    },
+    {
+      "pileNo": "1042955689585",
+      "maintType": 3,
+      "createDate": 11112121212,
+      "repairFault": {
+        "faultCode": "4353453453453",
+        "faultName": "主板损坏；主板其他问题损坏"
+      },
+      "partsInfo": {
+        "partsGuid": 12,
+        "partsName": "主板",
+        "partsNum": 1
+      },
+      "maintNumInfo": {
+        "freshCode": 34234234234,
+        "oldCode": 34234234234
+      }
+
+    }
+  ],
+  "total": 100
+}

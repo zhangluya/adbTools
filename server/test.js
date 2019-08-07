@@ -31,7 +31,8 @@ const SET_PROXY = '1'
 const RESET_PROXY = '2'
 const INSTALL_SSL = '3'
 const SHOW_TOP_ACTIVITY = '4'
-const EXIT = '5'
+const SHOW_PROXY = '5'
+const EXIT = '6'
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -39,6 +40,7 @@ const rl = readline.createInterface({
 })
 
 function quesition() {
+  let result = ''
   rl.question(ui, answer => {
     switch (answer) {
       case SET_PROXY:
@@ -51,7 +53,11 @@ function quesition() {
         adbUtils.openBrowser('http://chls.pro/ssl')
         break
       case SHOW_TOP_ACTIVITY:
-        const result = adbUtils.showTopActivity()
+        result = adbUtils.showTopActivity()
+        console.log(result)
+        break
+      case SHOW_PROXY:
+        result = adbUtils.showProxy()
         console.log(result)
         break
       case EXIT:

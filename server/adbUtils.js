@@ -21,7 +21,7 @@ module.exports = {
   },
   resetHttpProxy: function() {
     try {
-      execSync('adb shell settings delete global http_proxy')
+      execSync('adb shell settings delete global global_http_proxy')
       execSync('adb shell settings delete global global_http_proxy_host')
       execSync('adb shell settings delete global global_http_proxy_port')
       execSync('adb reboot')
@@ -36,7 +36,7 @@ module.exports = {
       const port = execSync('adb shell settings get global global_http_proxy_port').toString()
       return { proxy, host, port }
     } catch (ex) {
-
+      console.error(ex)
     }
   },
   openBrowser: function(url) {
@@ -48,7 +48,7 @@ module.exports = {
   },
   showTopActivity: function() {
     try {
-      return execSync('adb shell dumpsys activity | grep "mFocusedActivity"').toString()
+      return execSync('adb shell dumpsys activity top | grep ACTIVITY').toString()
     } catch (ex) {
 
     }

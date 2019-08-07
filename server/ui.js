@@ -1,11 +1,17 @@
 
-const LINE_1 = '**************ADB TOOLS************\n'
-const LINE_2 = '*           1.设置代理           *\n'
-const LINE_3 = '*           2.取消代理           *\n'
-const LINE_4 = '*           3.安装ssl证书        *\n'
-const LINE_5 = '*           4.查看当前Activity   *\n'
-const LINE_6 = '*           5.退出               *\n'
-const LINE_7 = '**********************************\n'
-const LINE_8 = '请选择：'
+const LINE_START = 'ADB TOOLS\n'
+const LINE_BOTTOM = '\n'
+const LINE_TIPS = '请选择：'
 
-module.exports = LINE_1 + LINE_2 + LINE_3 + LINE_4 + LINE_5 + LINE_6 + LINE_7 + LINE_8
+const actions = ['1.设置代理', '2.取消代理','3.安装ssl证书','4.查看当前Activity', '5.已经设置的代理', '6.退出']
+let result = LINE_START
+actions.forEach(it => {
+  const styleAddtion = it + '\n'
+  result += styleAddtion;
+})
+result += LINE_BOTTOM
+result += LINE_TIPS
+
+
+
+module.exports = result
